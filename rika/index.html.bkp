@@ -15,40 +15,28 @@
       color: #444;
       margin-bottom: 30px;
     }
-
-    /* Container estilo Pinterest */
-    .masonry {
-      column-count: 3;          /* número de colunas (ajuste aqui) */
-      column-gap: 15px;         /* espaço entre colunas */
-      max-width: 1200px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-
-    .masonry img {
+    .grid img {
       width: 100%;
-      margin-bottom: 15px;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      break-inside: avoid;      /* evita quebrar imagens na coluna */
       transition: transform 0.2s ease;
     }
-
-    .masonry img:hover {
-      transform: scale(1.03);
-    }
-
-    /* Responsivo */
-    @media (max-width: 900px) {
-      .masonry { column-count: 2; }
-    }
-    @media (max-width: 600px) {
-      .masonry { column-count: 1; }
+    .grid img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Para: 🌸Rika-chan 🌸</h1>
-  <div class="masonry">
+  <h1>🌸 Para: Rika-chan 🌸</h1>
+  <div class="grid">
     <img src="img/flor01.jpg" alt="Tulipa 1">
     <img src="img/flor02.jpg" alt="Tulipa 2">
     <img src="img/flor03.jpg" alt="Tulipa 3">
@@ -58,6 +46,7 @@
     <img src="img/flor07.jpeg" alt="Tulipa 5">
     <img src="img/flor_snf.jpg" alt="Significado tulipa">
     <img src="img/flor_snf01.jpg" alt="Significado Margarida">
+    <!-- pode adicionar quantas fotos quiser -->
   </div>
 </body>
 </html>
